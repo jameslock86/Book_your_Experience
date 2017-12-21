@@ -1,0 +1,32 @@
+{
+  "name": "book_your_experience",
+  "version": "1.0.0",
+  "description": "food service app that will allow user to order pre-made food or have a cook come to there house to make them dinner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameslock86/Book_your_Experience.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jameslock86/Book_your_Experience/issues"
+  },
+  "homepage": "https://github.com/jameslock86/Book_your_Experience#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "knex": "^0.14.2",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.1",
+    "pg": "^7.4.0"
+  },
+  "devDependencies": {}
+}
