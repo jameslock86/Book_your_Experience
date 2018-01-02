@@ -6,15 +6,21 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "hbs": "~4.0.1",
     "knex": "^0.14.2",
+    "materialize-social": "^1.0.3",
     "method-override": "^2.3.10",
+    "mongoose": "^4.13.7",
     "morgan": "~1.9.0",
     "nodemon": "^1.14.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "pg": "^7.4.0",
     "serve-favicon": "~2.4.5"
   }
