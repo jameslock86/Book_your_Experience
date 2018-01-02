@@ -1,0 +1,36 @@
+<nav class="navbar-fixed">
+  <div class="nav-wrapper">
+    <a href="/profile/edit-profile"><img class="profileimg" src="{{user.thumbnail}}"></a>
+    <span class="brand-logo center"><h4>Hi, {{user.username}}!</h4></span>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/auth/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="services container">
+  <div class="row">
+    <div class="trending col s4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"><h5>Trending</h5></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each foodTrend.data.matches}}
+          <tr>
+            <th scope="row"><a href="/profile/recipe">{{recipeName}}</a></th>
+          </tr>
+            {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div class="favorites col s4">
+      <h5>favorite recipes!</h5>
+    </div>
+    <div class="fridge col s4">
+      <h5>Fridge!</h5>
+    </div>
+  </div>
+</div>
