@@ -8,5 +8,9 @@ module.exports = {
   },
   session: {
     cookieKey:"jshdbsiuhrjncwiuhkaksdhfbcnwu746455nkshfskjf9f9fhgbdise7g49uh4848272g3vjskwekdjdjdddjsuss0958whladld0003747866738293482jdks"
+  },
+  facebook: {
+    clientID:"313751959113970",
+    clientSecret: "79ea89e358869397263c09b92b715ecf"
   }
 };

@@ -14,6 +14,23 @@ body {
    padding: 0%;
  }
 
+ .recipepage {
+   background-image: radial-gradient(cyan 0%, transparent 50%, lightyellow 60%);
+   background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+.index {
+  background-image:url('../images/small-fridge.png');
+background-repeat:no-repeat;
+/*background-size:contain;*/
+background-position:bottom;
+width: 100%;
+    max-height: 650px;
+    min-height: 250px;
+}
+
  main {
    flex: 1 0 auto;
  }
@@ -50,9 +67,8 @@ body {
   flex-direction: row;
    align-items: center;
    justify-content: center;
-   height: 100%;
-   width: 100%;
-   background-color: blanchedalmond
+   background-color: blanchedalmond;
+   border-radius: 50px;
 }
 .topbar.container {
   display: flex;
@@ -77,18 +93,23 @@ body {
   padding: 10px;
   background: #3b5998;
 }
-form {
-  margin-top: -300px;
+.landingform {
+  display: flex;
+  justify-content: center;
 }
 
 .favorites {
   display: flex;
   justify-content: center;
-  background-color: lightgrey;
+  /*background-color: lightgrey;*/
 }
 .fridge {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.fridgepic {
+  width: 45.5px;
+  height: 45.5px;
 }
 .trending {
   display: flex;
@@ -97,4 +118,40 @@ form {
 .profileimg {
   border-radius: 50%;
   padding: 5px;
+}
+.recipe {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: blanchedalmond;
+  height: 100%;
+  border-radius: 5px;
+}
+.extrainfo {
+  height: 100%;
+  background: skyblue;
+  border-radius: 5px;
+}
+.directions {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 100%;
+  }
+
+.foodpic {
+  border-radius: 5px;
+  width: 100%;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+}
+.fridgelist:nth-child(1n) {
+  background-color: lightgrey;
+}
+.pan {
+  height:20px;
+  width:20px;
 }

@@ -1,3 +1,5 @@
+<html>
+<body>
 <nav class="navbar-fixed">
   <div class="nav-wrapper">
     <a href="/profile/edit-profile"><img class="profileimg" src="{{user.thumbnail}}"></a>
@@ -14,23 +16,67 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col"><h5>Trending</h5></th>
+            <th scope="col"><h5>Specials</h5></th>
           </tr>
         </thead>
         <tbody>
           {{#each foodTrend.data.matches}}
           <tr>
-            <th scope="row"><a href="/profile/recipe">{{recipeName}}</a></th>
+            <th scope="row"><a href="/profile/{{id}}">{{recipeName}}</a></th>
           </tr>
             {{/each}}
         </tbody>
       </table>
     </div>
     <div class="favorites col s4">
-      <h5>favorite recipes!</h5>
+    
     </div>
     <div class="fridge col s4">
-      <h5>Fridge!</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"><img class="fridgepic" src="/images/fridge.png"></th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- hbs each here -->
+
+            <form>
+              <tr>
+                <th>
+                <input value="chicken" id="main" type="text" name="main">
+              </th>
+              </tr>
+              <tr>
+                <th>
+                <input value="rosemary" id="primary" type="text" name="primary">
+              </th>
+              </tr>
+              <tr>
+                <th>
+                <input value="lemon" id="secondary" type="text" name="secondary">
+              </th>
+              </tr>
+              <tr>
+                <th>
+                <input value="Salt" id="secondary2" type="text" name="secondary2">
+              </th>
+              </tr>
+              <tr>
+                <th>
+                  <button formmethod="get" formaction="/profile/fridge-recipes" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+              </th>
+              </tr>
+
+              </form>
+
+            <!-- hbs each end here -->
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
+</body>
+</html>

@@ -1,1 +1,58 @@
-cool!
+<html class="recipepage">
+<nav class="navbar-fixed">
+  <div class="nav-wrapper">
+    <a href="/profile/edit-profile"><img class="profileimg" src="{{user.thumbnail}}"></a>
+    <span class="brand-logo center"><h5>{{recipe.data.name}}</h5></span>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/profile">home</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="infosec row">
+  <div class="recipe col s3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"><h5>Ingredients</h5></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each recipe.data.ingredientLines}}
+        <tr>
+          <th scope="row">{{this}}</th>
+        </tr>
+          {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+<div class="col s6">
+  {{#each recipe.data.images}}
+  <ul>
+  <li class="recipeList"><img class="foodpic" src="{{hostedLargeUrl}}"></li>
+  </ul>
+    {{/each}}
+    <div class="extrainfo">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"><h5></h5>Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Rating: {{recipe.data.rating}}</th></tr>
+          <tr><th scope="row">Number of Servings: {{recipe.data.numberOfServings}}</th></tr>
+          <tr><th>Total Time: {{recipe.data.totalTime}}</th></tr>
+          <tr><th>Cuisine: {{recipe.data.attributes.cuisine}}</th></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="directions col s3">
+    <h5>{{recipe.data.source.sourceDisplayName}}</h5>
+    <h6>For a detailed list of directions, click <a href="{{recipe.data.source.sourceRecipeUrl}}">here</a></h6>
+  </div>
+</div>
+</html>
