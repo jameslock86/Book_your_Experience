@@ -4,7 +4,7 @@ let fs = require('fs');
 let express = require('express');
 let app = express();
 //sets port
-let port = process.env.PORT||8000;
+//let port = process.env.PORT||4000;
 //sets middle ware
 let morgan= require('morgan');
 let bodyParser= require('body-parser');
@@ -29,6 +29,6 @@ app.use('/', function (req, res) {
 	res.render('index');
 });
 // sets the nodemon to where we are listening to it from the PORT
-app.listen(port,function () {
-	console.log('Listening on port', port);
-});
+//app.listen(port,function () {
+//console.log('Listening on port', port);
+//});

@@ -1,0 +1,100 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+a {
+  color: #00B7FF;
+}
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   padding: 0%;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -100;
+ -ms-transform: translateX(-100%) translateY(-50%);
+ -moz-transform: translateX(-50%) translateY(-50%);
+ -webkit-transform: translateX(-50%) translateY(-50%);
+ transform: translateX(-50%) translateY(-50%);
+}
+.overlay {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 70px; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headtext {
+  color: white;
+  font-family: 'Nobile', sans-serif;
+  font-size: 5vw;
+  text-align: center;
+}
+
+.buttons.container {
+  display: flex;
+  flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   background-color: blanchedalmond
+}
+.topbar.container {
+  display: flex;
+  flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   /*background-color: blanchedalmond*/
+}
+.google-btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  background: #ff5353;
+}
+.facebook-btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  background: #3b5998;
+}
+form {
+  margin-top: -300px;
+}
+
+.favorites {
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
+}
+.fridge {
+  display: flex;
+  justify-content: center;
+}
+.trending {
+  display: flex;
+  justify-content: center;
+}
+.profileimg {
+  border-radius: 50%;
+  padding: 5px;
+}
