@@ -108,6 +108,8 @@ width: 100%;
   justify-content: flex-start;
 }
 .fridgepic {
+  display: flex;
+  justify-content: center;
   width: 45.5px;
   height: 45.5px;
 }

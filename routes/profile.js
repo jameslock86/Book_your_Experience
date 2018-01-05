@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const https = require('https');
 const axios = require('axios');
-const trendingURL = 'http://api.yummly.com/v1/api/recipes?_app_id=dbc75cfa&_app_key=26ab8720b15d24946a036eac04af1622&q=dinner&requirePictures=true'
+const trendingURL = 'http://api.yummly.com/v1/api/recipes?_app_id=dbc75cfa&_app_key=26ab8720b15d24946a036eac04af1622&q=dinner&allowedIngredient[]=rosemary&allowedIngredient[]=butter&allowedIngredient[]=onion&allowedIngredient[]=bacon&allowedIngredient[]=spinach&requirePictures=true'
 let trend;
 let single;
 let fridgeData;
@@ -12,7 +12,7 @@ axios
   .get(trendingURL)
   .then(response => {
     trend = response
-    // console.log(trend);
+    console.log(Object.values(trend.data.matches[0].imageUrlsBySize));
   })
   .catch(error => {
     console.log(error);
@@ -41,12 +41,12 @@ router.get('/fridge-recipes', (req, res) => {
   const secondary = req.query.secondary.toLowerCase();
   const secondary2 = req.query.secondary2.toLowerCase();
   const fridgeURL = `http://api.yummly.com/v1/api/recipes?_app_id=dbc75cfa&_app_key=26ab8720b15d24946a036eac04af1622&q=${main}&allowedIngredient[]=${primary}&allowedIngredient[]=${secondary}&allowedIngredient[]=${secondary2}&requirePictures=true`;
-  console.log(req.query)
+
   axios
     .get(fridgeURL)
     .then(response => {
       fridgeData = response
-      console.log(fridgeData.data.matches);
+      console.log(fridgeData.data.matches[0].id);
       res.render('fridge-recipes', {user: req.user, fridgeData: fridgeData});
     })
     .catch(error => {

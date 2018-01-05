@@ -3,7 +3,7 @@
   <nav class="navbar-fixed">
     <div class="nav-wrapper">
       <a href="/profile/edit-profile"><img class="profileimg" src="{{user.thumbnail}}"></a>
-      <span class="brand-logo center"><h5>{{user.username}} is cool!</h5></span>
+      <span class="brand-logo center"><h5>Your Recipes</h5></span>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/profile">home</a></li>
       </ul>
@@ -16,9 +16,19 @@
   {{#each fridgeData.data.matches}}
     <li>
       <div class="collapsible-header"><img class="pan" src="../images/pan.png">{{recipeName}}</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+
+      <div class="collapsible-body">
+        <ul>
+          {{#each ingredients}}
+        <li>{{this}}</li>
+        {{/each}}
+
+        <br><li>For more information, click <a href="/profile/{{id}}">here</a></li>
+      </ul>
+    </div>
+
     </li>
-    {{/each}}
+{{/each}}
 </ul>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
