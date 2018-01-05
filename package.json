@@ -1,21 +1,43 @@
 {
-  "name": "book-your-experience",
-  "version": "0.0.0",
-  "private": true,
+  "name": "book_your_experience",
+  "version": "1.0.0",
+  "description": "food service app that will allow user to order pre-made food or have a cook come to there house to make them dinner",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameslock86/Book_your_Experience.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jameslock86/Book_your_Experience/issues"
+  },
+  "homepage": "https://github.com/jameslock86/Book_your_Experience#readme",
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "hbs": "~4.0.1",
+    "axios": "^0.17.1",
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "hbs": "^4.0.1",
     "knex": "^0.14.2",
     "method-override": "^2.3.10",
-    "morgan": "~1.9.0",
+    "modules": "^0.4.0",
+    "mongodb": "3.4.10",
+    "mongoose-bcrypt": "^1.5.0",
+    "morgan": "^1.9.0",
     "nodemon": "^1.14.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "pg": "^7.4.0",
-    "serve-favicon": "~2.4.5"
-  }
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {}
 }
