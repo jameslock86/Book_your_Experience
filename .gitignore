@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+//yummly info
+Application: API signup
+API signup
+Application ID
+This is the application ID, you should send with each API request.
+
+cb126566
+
+Application Keys
+These are application keys used to authenticate requests.
+
+Create New Key
+3f5d05ed3ffb9e3e578bcbdab76efd8e

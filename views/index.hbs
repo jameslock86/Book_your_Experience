@@ -12,48 +12,54 @@
 
 
 <div class="row">
-  <form class=" landingform col s12 m12">
+  <form name="users" method="POST" action="/users" class=" landingform col s12 m12">
     <div class="row">
       <div class="input-field col s12 m12">
         <i class="material-icons prefix">account_circle</i>
-        <input placeholder="Full Name" id="icon_prefix" type="text" class="validate">
+        <input name="full_name" placeholder="Full Name" id="icon_prefix" type="text" class="validate">
       </div>
+      <!-- <div class="input-field col s6">
+        <input placeholder="Last Name" class="validate">
+      </div> -->
     </div>
     <div class="row">
       <div class="input-field col s12 m12">
         <i class="material-icons prefix">phone</i>
-        <input placeholder="Telephone" id="icon-telephone" type="tel" class="validate">
+        <input name="telephone" placeholder="Telephone" id="icon-telephone" type="tel" class="validate">
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12 m12">
         <i class="material-icons prefix">face</i>
-        <input placeholder="Username" id="icon-face" type="text" class="validate">
+        <input name= "username" placeholder="Username" id="icon-face" type="text" class="validate">
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12 m12">
         <i class="material-icons prefix">email</i>
-        <input placeholder="Email" id="icon-email" type="email" class="validate">
+        <input name = "email" placeholder="Email" id="icon-email" type="email" class="validate">
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6 m6">
         <i class="material-icons prefix">security</i>
-        <input placeholder="Password" id="icon-security" type="password" class="validate">
+        <input name = "password" placeholder="Password" id="icon-security" type="Password" class="validate">
       </div>
       <div class="input-field col s6 m6">
-        <input placeholder="Confirm Password" id="confirm-password" type="password">
+        <input name= "confirmPassword" placeholder="Confirm Password" id="confirmPassword" type="password">
       </div>
+
+			<div class="row">
+				<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			     <i class="material-icons right">send</i>
+
+				 </button>
+				 <a class="google-btn" href="/auth/google">Google+</a>
+				 <a class="facebook-btn" href="/auth/facebook">Facebook</a>
+
+			 	</div>
     </div>
   </form>
-</div>
-
-<div class="buttons container">
-  <div class="row">
-  <a class="google-btn" href="/auth/google">Google+</a>
-  <a class="facebook-btn" href="/auth/facebook">Facebook</a>
-  </div>
 </div>
 
 
