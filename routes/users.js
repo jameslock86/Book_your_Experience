@@ -58,27 +58,27 @@ router.get('/', authCheck, function(req, res) {
 	res.render('/profile', req.user);
 
 });
-
-router.get('/profile/profile-edit',function (req,res,next) {
-	let id = req.params.id;
-	let updatebody = req.body;
-	console.log('working on adding pics');
-
-	router.patch('');
-	user.updateOne('user').updateOne();
-});
-MongoClient.connect(conn, function (err, user) {
-	if(err) throw err;
-	var myQuery = ({user:'_id'},{user:'thumbnail'});
-	var newValue = ({user:'_id'},{user:'thumbnail'});
-
-	console.log('work dangit',myQuery);
-	user.collection(myData).updateOne(myQuery,newValue, function (err,res) {
-		if(err) throw err;
-		db.close();
-	});
-
-});
+//
+// router.get('/profile/profile-edit',function (req,res,next) {
+// 	let id = req.params.id;
+// 	let updatebody = req.body;
+// 	console.log('working on adding pics');
+//
+// 	router.patch('');
+// 	user.updateOne('user').updateOne();
+// });
+// MongoClient.connect(conn, function (err, user) {
+// 	if(err) throw err;
+// 	var myQuery = ({user:'_id'},{user:'thumbnail'});
+// 	var newValue = ({user:'_id'},{user:'thumbnail'});
+//
+// 	console.log('work dangit',myQuery);
+// 	user.collection(myData).updateOne(myQuery,newValue, function (err,res) {
+// 		if(err) throw err;
+// 		db.close();
+// 	});
+//
+// });
 
 
 
