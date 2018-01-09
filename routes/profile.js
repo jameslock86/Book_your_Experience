@@ -51,7 +51,7 @@ router.get('/fridge-recipes', (req, res) => {
     })
     .catch(error => {
       console.log(error);
-      res.sendStatus(500);
+      res.send('no recipes match your search');
     });
 });
 
